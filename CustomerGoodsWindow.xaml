@@ -1,0 +1,60 @@
+﻿<Window x:Class="Pr4.CustomerGoodsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pr4"
+        mc:Ignorable="d"
+        Title="CustomerGoodsWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock Text="Каталог товаров"
+                   FontSize="30"
+                   HorizontalAlignment="Center"
+                   Margin="0,10,0,0"/>
+        <DataGrid Name="GoodsDataGrid"
+                  Height="200"
+                  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Наименование товара" Width="*" Binding="{Binding GoodName}"/>
+                <DataGridTextColumn Header="Категория товара" Width="*" Binding="{Binding CategoryName}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel VerticalAlignment="Bottom"
+                    Height="100"
+                    Width="210"
+                    HorizontalAlignment="Left"
+                     Margin="0,0,0,10">
+        <TextBlock Text="Поиск товара: "
+                   FontSize="20"/>
+            <TextBox x:Name="GoodName"
+                     Width="200"
+                     Height="30"
+                     TextChanged="GoodName_TextChanged"/>
+        </StackPanel>
+        <StackPanel VerticalAlignment="bottom"
+                    HorizontalAlignment="Center"
+                    Margin="0,0,70,70">
+        <RadioButton Name="AscSort"
+                     GroupName="SortButtons"
+                     Content="Сортировка по возрастанию"
+                     Click="RadioButton_Click"/>
+            <RadioButton Name="DescSort" 
+                         GroupName="SortButtons"
+                         Content="Сортировка по убыванию"
+                         Click="RadioButton_Click"/>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right"
+                    Margin="0,0,40,30">
+            <TextBlock Text="Выберите категорию для фильтрации"/>
+            <ComboBox Name="CategoriesComboBox"
+                      Height="30"
+                      Width="200"/>
+            <Button Name="ResetButton"
+                    Content="Сброс"
+                    Margin="0,10,0,0"
+                    Click="ResetButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
