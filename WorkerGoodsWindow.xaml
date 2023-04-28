@@ -5,8 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pr4"
         mc:Ignorable="d"
-        Title="WorkerGoodsWindow" Height="450" Width="800">
+        Title="Каталог товаров" Height="450" Width="800">
     <Grid>
-        
+        <TextBlock Text="Каталог товаров"
+                   FontSize="30"
+                   Margin="0,10,0,0"
+                   HorizontalAlignment="Center"/>
+        <DataGrid Name="GoodsDataGrid"
+                  Height="200"
+                  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Наименование товара" Width="*" Binding="{Binding GoodName}"/>
+                <DataGridTextColumn Header="Категория товара" Width="*" Binding="{Binding CategoryName}"/>
+                <DataGridTextColumn Header="Цена" Width="*" Binding="{Binding Price}"/>
+                <DataGridTemplateColumn Header="Отредактировать" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="EditGoodButton"
+                                    Click="EditGoodButton_Click"
+                                    Content="Отредактировать"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Удалить" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="DeleteGoodButton"
+                                    Click="DeleteGoodButton_Click"
+                                    Content="Удалить"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="AddGoodButton"
+                Height="30"
+                Width="200"
+                Content="Добавить новый товар"
+                VerticalAlignment="Bottom"
+                Margin="0,0,0,50"
+                Click="AddGoodButton_Click"/>
+        <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,20"><Hyperlink Name="NavigationHyperlink" Click="NavigationHyperlink_Click">Навигация</Hyperlink></TextBlock>
     </Grid>
 </Window>

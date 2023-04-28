@@ -20,11 +20,11 @@ namespace Pr4
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Pr4Entities pr4Entities;
+        private Pr4Entities1 pr4Entities;
         private List<CUSTOMER> Customers { get; set; }
         public MainWindow()
         {
-            pr4Entities = new Pr4Entities();
+            pr4Entities = new Pr4Entities1();
             InitializeComponent();
             Customers = pr4Entities.CUSTOMER.ToList<CUSTOMER>();
         }
@@ -50,8 +50,8 @@ namespace Pr4
                         MessageBoxResult messageBoxResult = MessageBox.Show("Вы успешно авторизовались", "Внимание", MessageBoxButton.OK); 
                         if(messageBoxResult == MessageBoxResult.OK)
                         {
-                            CustomerGoodsWindow customerGoodsWindow = new CustomerGoodsWindow(currentCustomer);
-                            customerGoodsWindow.Show();
+                            CustomerNavigationWindow customerNavigationWindow = new CustomerNavigationWindow(currentCustomer);
+                            customerNavigationWindow.Show();
                             this.Close();
                         }
                     }  
@@ -59,6 +59,10 @@ namespace Pr4
                     {
                         MessageBox.Show("Вы ввели неверный пароль","Внимание");
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Пользователя с таким логином не существует","Внимание");
                 }
             }
             else

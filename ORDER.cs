@@ -24,7 +24,10 @@ namespace Pr4
         public int CUSTOMER { get; set; }
         public string ADDRESS { get; set; }
         public System.DateTime DATEORDER { get; set; }
-    
+
+        public string NAME { get; set; }
+        public string AMOUNT { get; set; }
+
         public virtual CUSTOMER CUSTOMER1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BASKET> BASKET { get; set; }

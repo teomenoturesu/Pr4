@@ -20,10 +20,10 @@ namespace Pr4
     public partial class WorkerAuthorizationWindow : Window
     {
         private List<WORKER> Workers { get; set; }
-        private Pr4Entities pr4Entities;
+        private Pr4Entities1 pr4Entities;
         public WorkerAuthorizationWindow()
         {
-            pr4Entities = new Pr4Entities();
+            pr4Entities = new Pr4Entities1();
             InitializeComponent();
             Workers = pr4Entities.WORKER.ToList<WORKER>();
         }
@@ -49,8 +49,8 @@ namespace Pr4
                         MessageBoxResult messageBoxResult = MessageBox.Show("Вы успешно авторизовались", "Внимание", MessageBoxButton.OK);
                         if (messageBoxResult == MessageBoxResult.OK)
                         {
-                            WorkerGoodsWindow workerGoodsWindow = new WorkerGoodsWindow();
-                            workerGoodsWindow.Show();
+                            WorkerNavigationWindow workerNavigationWindow = new WorkerNavigationWindow();
+                            workerNavigationWindow.Show();
                             this.Close();
                         }
                     }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pr4"
         mc:Ignorable="d"
-        Title="CustomerGoodsWindow" Height="450" Width="800">
+        Title="Каталог" Height="450" Width="800">
     <Grid>
         <TextBlock Text="Каталог товаров"
                    FontSize="30"
@@ -17,7 +17,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Наименование товара" Width="*" Binding="{Binding GoodName}"/>
                 <DataGridTextColumn Header="Категория товара" Width="*" Binding="{Binding CategoryName}"/>
-
+                <DataGridTextColumn Header="Цена" Width="*" Binding="{Binding Price}"/>
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel VerticalAlignment="Bottom"
@@ -50,11 +50,21 @@
             <TextBlock Text="Выберите категорию для фильтрации"/>
             <ComboBox Name="CategoriesComboBox"
                       Height="30"
-                      Width="200"/>
+                      Width="200"
+                      SelectionChanged="CategoriesComboBox_SelectionChanged"/>
             <Button Name="ResetButton"
                     Content="Сброс"
                     Margin="0,10,0,0"
                     Click="ResetButton_Click"/>
+            
         </StackPanel>
+        <Button x:Name="EscapeButton"
+                    Height="30"
+                    Width="150"
+                    Content="Назад"
+                    HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Margin="0,0,0,20"
+                Click="EscapeButton_Click"/>
     </Grid>
 </Window>

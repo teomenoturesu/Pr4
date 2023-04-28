@@ -4,14 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c173556bdf0c4ca395648afdc6c538f6" Name="Diagram1">
+      <Diagram DiagramId="c89ae4875bfc4d7ea8523fe6f6b8723e" Name="Diagram1">
         <EntityTypeShape EntityType="Pr4Model.CATEGORY" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Pr4Model.CUSTOMER" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="Pr4Model.GENDER" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Pr4Model.GOOD" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
         <EntityTypeShape EntityType="Pr4Model.ORDER" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Pr4Model.sysdiagrams" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="Pr4Model.WORKER" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Pr4Model.WORKER" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Pr4Model.BASKET" Width="1.5" PointX="7.5" PointY="1.375" IsExpanded="true" />
         <AssociationConnector Association="Pr4Model.FK__GOOD__CATEGORY__267ABA7A" ManuallyRouted="false" />
         <AssociationConnector Association="Pr4Model.FK__CUSTOMER__GENDER__2D27B809" ManuallyRouted="false" />

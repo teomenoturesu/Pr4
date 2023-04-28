@@ -13,10 +13,10 @@ namespace Pr4
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Pr4Entities : DbContext
+    public partial class Pr4Entities1 : DbContext
     {
-        public Pr4Entities()
-            : base("name=Pr4Entities")
+        public Pr4Entities1()
+            : base("name=Pr4Entities1")
         {
         }
     
@@ -30,7 +30,6 @@ namespace Pr4
         public virtual DbSet<GENDER> GENDER { get; set; }
         public virtual DbSet<GOOD> GOOD { get; set; }
         public virtual DbSet<ORDER> ORDER { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<WORKER> WORKER { get; set; }
         public virtual DbSet<BASKET> BASKET { get; set; }
     }

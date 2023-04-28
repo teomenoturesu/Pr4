@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pr4"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Авторизация пользователя" Height="450" Width="800">
     <Grid>
         <TextBlock Text="Авторизация покупателя"
                    HorizontalAlignment="Center"
